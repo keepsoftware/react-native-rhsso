@@ -1,6 +1,6 @@
 /**
  * Sample React Native App
- * https://github.com/facebook/react-native
+ * https://github.com/keepsoftware/react-native-rhsso
  *
  * @format
  * @flow strict-local
@@ -64,16 +64,16 @@ const App: () => Node = () => {
   };
 
   const config = {
-    issuer: 'http://192.168.0.115:8080/auth/realms/Clientes/',
+    issuer: 'http://192.168.0.115:8080/auth/realms/clientes/',
     clientId: 'users',
     redirectUrl: 'ubdi://connect',
     scopes: ['openid'],
     usePKCE: true,
     dangerouslyAllowInsecureHttpRequests: true,
     serviceConfiguration: { 
-      authorizationEndpoint: 'http://192.168.0.115:8080/auth/realms/Clientes/protocol/openid-connect/auth', 
-      tokenEndpoint: 'http://192.168.0.115:8080/auth/realms/Clientes/protocol/openid-connect/token', 
-      revocationEndpoint: 'http://192.168.0.115:8080/auth/realms/Clientes/protocol/openid-connect/revoke'
+      authorizationEndpoint: 'http://192.168.0.115:8080/auth/realms/clientes/protocol/openid-connect/auth', 
+      tokenEndpoint: 'http://192.168.0.115:8080/auth/realms/clientes/protocol/openid-connect/token', 
+      revocationEndpoint: 'http://192.168.0.115:8080/auth/realms/clientes/protocol/openid-connect/revoke'
     }
   };
   let result = {};
@@ -128,23 +128,7 @@ const App: () => Node = () => {
             <Button onPress={login} title="Login Keycloak"/>
             <Button onPress={logout} title="Logout Keycloak"/>
 
-
-
-
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+          
         </View>
       </ScrollView>
     </SafeAreaView>
